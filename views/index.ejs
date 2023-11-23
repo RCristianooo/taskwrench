@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taskwrench</title>
     <link rel="stylesheet" href="/css/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="flex min-h-screen items-center justify-center p-2">
@@ -14,11 +17,16 @@
             <h2>Keep track of every client using the efficiency, precision, and ease of task management with TaskWrench – 
                 your solution to empowering productivity!
             </h2>
-            <div>
+            <div class="flex justify-center gap-2">
                 <button class="btn btn-success" onclick="window.location.href='/login'">Login</button>
                 <button class="btn btn-neutral" onclick="window.location.href='/signup'">Signup</button>
             </div>
         </div>
     </div>
+    <footer class="footer footer-center bg-base-300 p-4 text-base-content">
+        <aside>
+            <p>Built by Software Engineer <a href="cristianroblero.netlify.app" class="text-black">Cristian Roblero</a></p>
+        </aside>
+    </footer>
 </body>
 </html>
