@@ -10,22 +10,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="flex min-h-screen items-center justify-center p-2">
-        <div class="app text-center">
-            <h1 class="bg-blue-400">Taskwrench</h1>
-            <h2>Keep track of every client using the efficiency, precision, and ease of task management with TaskWrench – 
-                your solution to empowering productivity!
+<body class="bg-slate-100">
+    <div class="flex min-h-screen items-center justify-left">
+        <div class="ml-10 app text-left">
+            <h1 class="text-info" style="font-size: 2.5rem;">Taskwrench</h1>
+            <h2 class="mb-8 text-blue-950 md:block">
+                Your solution to empowering productivity!
+                <br>
+                Keep track of every client using the efficiency, precision, and ease of task management with Taskwrench.
             </h2>
-            <div class="flex justify-center gap-2">
-                <button class="btn btn-success" onclick="window.location.href='/login'">Login</button>
-                <button class="btn btn-neutral" onclick="window.location.href='/signup'">Signup</button>
+            <div class="flex justify-stretch gap-2">
+                <button class="btn btn-info text-slate-100" onclick="window.location.href='/login'">Login</button>
+                <button class="btn border-blue-950 btn-outline text-blue-950" onclick="window.location.href='/signup'">Signup</button>
             </div>
         </div>
+        <div>
+            <img class="w-full h-auto max-h-screen max-w-full md:max-w-fit pl-16" src="/imgs/Taskwrench-Index.jpg" alt="Keeping track of every client!">
+        </div>
     </div>
-    <footer class="footer footer-center bg-base-300 p-4 text-base-content">
-        <aside>
-            <p>Built by Software Engineer <a href="cristianroblero.netlify.app" class="text-black">Cristian Roblero</a></p>
+    <footer class="footer footer-center bg-info p-4 text-base-content">
+        <aside class="text-blue-950">
+            <p>Built by Software Engineer <a href="http://cristianroblero.netlify.app" class="text-slate-100">Cristian Roblero</a></p>
         </aside>
     </footer>
 </body>

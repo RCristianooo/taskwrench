@@ -10,21 +10,34 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     </head>
-<body>
-    <% if (locals.messages.errors) { %>
-        <% messages.errors.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-    <% if (locals.messages.info) { %>
-        <% messages.info.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-    <form action="/login" method="POST">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit">
-    </form>
+<body class="bg-slate-100">
+    <div class="flex justify-left items-center min-h-screen">
+        <div class="ml-10 app text-left">
+            <% if (locals.messages.errors) { %>
+                <% messages.errors.forEach( el => { %>
+                    <div class="alert alert-danger"><%= el.msg %></div>
+                <% }) %>    
+            <% } %>
+            <% if (locals.messages.info) { %>
+                <% messages.info.forEach( el => { %>
+                    <div class="alert alert-danger"><%= el.msg %></div>
+                <% }) %>    
+            <% } %>
+            <h1 class="text-info" style="font-size: 2.5rem;">Taskwrench</h1>
+            <form action="/login" method="POST" class="flex flex-col">
+                <input type="email" name="email" placeholder="Email" class="input input-info w-full mb-4 border-info bg-slate-100 text-blue-950">
+                <input type="password" name="password" placeholder="Password" class="input input-info w-full mb-4 border-info bg-slate-100 text-blue-950">
+                <input type="submit" value="Login" class="btn btn-info text-slate-100">
+            </form>
+        </div>
+        <div>
+            <img class="w-full h-auto max-h-screen max-w-full md:max-w-fit pl-16" src="/imgs/Taskwrench-Index.jpg" alt="Keeping track of every client!">
+        </div>
+    </div>
+    <footer class="footer footer-center bg-info p-4 text-base-content">
+        <aside class="text-blue-950">
+            <p>Built by Software Engineer <a href="http://cristianroblero.netlify.app" class="text-slate-100">Cristian Roblero</a></p>
+        </aside>
+    </footer>
 </body>
 </html>
