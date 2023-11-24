@@ -10,26 +10,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>Todos</h1>
-    <ul>
-    <% todos.forEach( el => { %>
-            <li class='todoItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                <span class='del'> Delete </span>
-            </li>
-    <% }) %>    
-    </ul>
+<body class="bg-slate-100">
+    <div class="flex justify-left items-center min-h-screen">
+        <div class="ml-14 app text-left">
+            <h2 class="text-info" style="font-size: 2.5rem;">Tasks & Contacts</h2>
+            <ul>
+            <% todos.forEach( el => { %>
+                    <li class='todoItem' data-id='<%=el._id%>'>
+                        <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                        <span class='del'> Delete </span>
+                    </li>
+            <% }) %>    
+            </ul>
 
-    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+            <h2 class="mb-6"><%= user.userName %> has <%= left %> tasks left to do.</h2>
 
-    <form action="/todos/createTodo" method='POST'>
-        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
-        <input type="submit">
-    </form>
+            <form action="/todos/createTodo" method='POST'>
+                <input type="text" placeholder="Enter Task" name='Task' class="input input-info w-2/4 mb-4 border-info bg-slate-100 text-blue-950" required>
+                <input type="text" placeholder="Name" name='name' class="input input-info w-2/4 mb-4 border-info bg-slate-100 text-blue-950" required>
+                <input type="text" placeholder="Address" name='address' class="input input-info w-2/4 mb-4 border-info bg-slate-100 text-blue-950" required>
+                <input type="tel" placeholder="Phone Number" name='phoneNumber' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="input input-info w-2/4 mb-4 border-info bg-slate-100 text-blue-950" required>
+                <textarea type="text" placeholder="Notes" name='notes' class="input input-info w-2/4 mb-4 border-info bg-slate-100 text-blue-950"></textarea>
+                <input type="submit" class="btn w-2/4 btn-info mb-4">
+            </form>
 
-    <a href="/logout">Logout</a>
-
+            <a href="/logout" class="btn btn-info mb-8">Logout</a>
+        </div>
+    </div>
+    <footer class="footer footer-center bg-info p-4 text-base-content">
+        <aside class="text-blue-950">
+            <p>Built by Software Engineer <a href="http://cristianroblero.netlify.app" class="text-slate-100">Cristian Roblero</a></p>
+        </aside>
+    </footer>
     <script src="js/main.js"></script>
 </body>
 </html>
