@@ -10,20 +10,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="bg-slate-100">
     <div class="flex justify-left items-center min-h-screen">
-        <% if (locals.messages.errors) { %>
-            <% messages.errors.forEach( el => { %>
-                <div class="alert alert-danger"><%= el.msg %></div>
-            <% }) %>    
-        <% } %>
-        <form action="/signup" method="POST">
-            <input type="text" name="userName" placeholder="User Name">
-            <input type="email" name="email" placeholder="Email">
-            <input type="password" name="password" placeholder="Password">
-            <input type="password" name="confirmPassword" placeholder="Confirm Password">
-            <input type="submit">
-        </form>
+        <div class="ml-14 app text-left">
+            <% if (locals.messages.errors) { %>
+                <% messages.errors.forEach( el => { %>
+                    <div class="alert alert-danger"><%= el.msg %></div>
+                <% }) %>    
+            <% } %>
+            <h1 class="text-info" style="font-size: 2.5rem;">Taskwrench</h1>
+            <form action="/signup" method="POST" class="flex flex-col">
+                <input type="text" name="userName" placeholder="User Name" class="input input-info w-full mb-4 border-info bg-slate-100 text-blue-950">
+                <input type="email" name="email" placeholder="Email" class="input input-info w-full mb-4 border-info bg-slate-100 text-blue-950">
+                <input type="password" name="password" placeholder="Password" class="input input-info w-full mb-4 border-info bg-slate-100 text-blue-950">
+                <input type="password" name="confirmPassword" placeholder="Confirm Password" class="input input-info w-full mb-4 border-info bg-slate-100 text-blue-950">
+                <input type="submit" value="Signup" class="btn btn-info text-slate-100">
+            </form>
+        </div>
+        <div class="ml-28 mt-28">
+            <img class="rounded-lg object-cover md:h-full md:w-96" src="/imgs/Taskwrench-Index.jpg" alt="Keeping track of every client!">
+        </div>
+        <div class="ml-28 mb-28">
+            <img class="rounded-lg object-cover md:h-full md:w-96" src="/imgs/Taskwrench-Index-2.jpg" alt="Keeping track of every client!">
+        </div>
     </div>
+    <footer class="footer footer-center bg-info p-4 text-base-content">
+        <aside class="text-blue-950">
+            <p>Built by Software Engineer <a href="http://cristianroblero.netlify.app" class="text-slate-100">Cristian Roblero</a></p>
+        </aside>
+    </footer>
 </body>
 </html>

@@ -12,7 +12,7 @@
     </head>
 <body class="bg-slate-100">
     <div class="flex justify-left items-center min-h-screen">
-        <div class="ml-10 app text-left">
+        <div class="ml-14 app text-left">
             <% if (locals.messages.errors) { %>
                 <% messages.errors.forEach( el => { %>
                     <div class="alert alert-danger"><%= el.msg %></div>
@@ -30,8 +30,11 @@
                 <input type="submit" value="Login" class="btn btn-info text-slate-100">
             </form>
         </div>
-        <div>
-            <img class="w-full h-auto max-h-screen max-w-full md:max-w-fit pl-16" src="/imgs/Taskwrench-Index.jpg" alt="Keeping track of every client!">
+        <div class="ml-28 mt-28">
+            <img class="rounded-lg object-cover md:h-full md:w-96" src="/imgs/Taskwrench-Index.jpg" alt="Keeping track of every client!">
+        </div>
+        <div class="ml-28 mb-28">
+            <img class="rounded-lg object-cover md:h-full md:w-96" src="/imgs/Taskwrench-Index-2.jpg" alt="Keeping track of every client!">
         </div>
     </div>
     <footer class="footer footer-center bg-info p-4 text-base-content">
