@@ -13,7 +13,7 @@ module.exports = {
     },
     createTask: async (req, res)=>{
         try{
-            await Task.create({task: req.body.taskItem, done: false, userId: req.user.id})
+            await Task.create({task: req.body.taskItem, name: req.body.name, address: req.body.address, phoneNumber: req.body.phoneNumber, notes: req.body.notes, done: false, userId: req.user.id})
             console.log('Task has been added!')
             res.redirect('/tasks')
         }catch(err){
@@ -43,9 +43,9 @@ module.exports = {
         }
     },
     deleteTask: async (req, res)=>{
-        console.log(req.body.todoIdFromJSFile)
+        console.log(req.body.taskIdFromJSFile)
         try{
-            await Task.findOneAndDelete({_id:req.body.TaskIdFromJSFile})
+            await Task.findOneAndDelete({_id:req.body.taskIdFromJSFile})
             console.log('Deleted Task')
             res.json('Deleted It')
         }catch(err){

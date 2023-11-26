@@ -5,6 +5,21 @@ const TaskSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  name: {
+    type: String,
+    required: true,
+  },
+  address: {
+    type: String,
+    required: true,
+  },
+  phoneNumber: {
+    type: String,
+    required: true,
+  },
+  notes: {
+    type: String,
+  },
   done: {
     type: Boolean,
     required: true,

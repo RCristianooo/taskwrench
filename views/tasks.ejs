@@ -17,7 +17,11 @@
             <ul>
             <% tasks.forEach( el => { %>
                     <li class='taskItem' data-id='<%=el._id%>'>
-                        <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.task %></span>
+                        <span class='<%= el.done === true ? 'Done' : 'Not Done'%>'><%= el.task %></span>
+                        <span><%= el.name %></span>
+                        <span><%= el.address %></span>
+                        <span><%= el.phoneNumber %></span>
+                        <span><%= el.notes %></span>
                         <span class='del'> Delete </span>
                     </li>
             <% }) %>    
@@ -26,10 +30,10 @@
             <h2 class="mb-6 text-blue-950"><%= user.userName %> has <%= left %> tasks left to do.</h2>
 
             <form action="/tasks/createTask" method='POST'>
-                <input type="text" placeholder="Enter Task" name='Task' class="input input-info w-2/4 mb-4 border-info bg-slate-100 text-blue-950" required>
-                <input type="text" placeholder="Name" name='name' class="input input-info w-2/4 mb-4 border-info bg-slate-100 text-blue-950" required>
-                <input type="text" placeholder="Address" name='address' class="input input-info w-2/4 mb-4 border-info bg-slate-100 text-blue-950" required>
-                <input type="tel" placeholder="Phone Number" name='phoneNumber' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="input input-info w-2/4 mb-4 border-info bg-slate-100 text-blue-950" required>
+                <input type="text" placeholder="Enter Task" name='taskItem' class="input input-info w-2/4 mb-4 border-info bg-slate-100 text-blue-950">
+                <input type="text" placeholder="Name" name='name' class="input input-info w-2/4 mb-4 border-info bg-slate-100 text-blue-950">
+                <input type="text" placeholder="Address" name='address' class="input input-info w-2/4 mb-4 border-info bg-slate-100 text-blue-950">
+                <input type="tel" placeholder="Phone Number" name='phoneNumber' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="input input-info w-2/4 mb-4 border-info bg-slate-100 text-blue-950">
                 <textarea type="text" placeholder="Notes" name='notes' class="input input-info w-2/4 mb-4 border-info bg-slate-100 text-blue-950"></textarea>
                 <input type="submit" class="btn w-2/4 btn-info mb-4">
             </form>

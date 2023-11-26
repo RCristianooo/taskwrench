@@ -1,6 +1,6 @@
 const deleteBtn = document.querySelectorAll('.del')
 const taskItem = document.querySelectorAll('span.not')
-const taskComplete = document.querySelectorAll('span.completed')
+const taskDone = document.querySelectorAll('span.done')
 
 Array.from(deleteBtn).forEach((el)=>{
     el.addEventListener('click', deleteTask)
@@ -10,7 +10,7 @@ Array.from(taskItem).forEach((el)=>{
     el.addEventListener('click', markDone)
 })
 
-Array.from(taskComplete).forEach((el)=>{
+Array.from(taskDone).forEach((el)=>{
     el.addEventListener('click', markNotDone)
 })
 
@@ -32,7 +32,7 @@ async function deleteTask(){
     }
 }
 
-async function markComplete(){
+async function markDone(){
     const taskId = this.parentNode.dataset.id
     try{
         const response = await fetch('tasks/markDone', {
@@ -50,10 +50,10 @@ async function markComplete(){
     }
 }
 
-async function markIncomplete(){
+async function markNotDone(){
     const taskId = this.parentNode.dataset.id
     try{
-        const response = await fetch('tasks/markIncomplete', {
+        const response = await fetch('tasks/markNotDone', {
             method: 'put',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
