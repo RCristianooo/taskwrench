@@ -1549,24 +1549,12 @@ html {
   margin-left: 7rem;
 }
 
-.mt-28 {
-  margin-top: 7rem;
-}
-
-.ml-32 {
-  margin-left: 8rem;
-}
-
-.ml-48 {
-  margin-left: 12rem;
-}
-
 .ml-72 {
   margin-left: 18rem;
 }
 
-.ml-80 {
-  margin-left: 20rem;
+.mt-28 {
+  margin-top: 7rem;
 }
 
 .flex {
