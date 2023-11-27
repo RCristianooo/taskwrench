@@ -1,5 +1,5 @@
 const deleteBtn = document.querySelectorAll('.del')
-const taskItem = document.querySelectorAll('span.not')
+const taskItem = document.querySelectorAll('span.notDone')
 const taskDone = document.querySelectorAll('span.done')
 
 Array.from(deleteBtn).forEach((el)=>{

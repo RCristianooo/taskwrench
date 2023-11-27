@@ -33,7 +33,7 @@ module.exports = {
     },
     markNotDone: async (req, res)=>{
         try{
-            await Task.findOneAndUpdate({_id:req.body.TaskIdFromJSFile},{
+            await Task.findOneAndUpdate({_id:req.body.taskIdFromJSFile},{
                 done: false
             })
             console.log('Marked Not Done')

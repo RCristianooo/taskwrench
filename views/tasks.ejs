@@ -17,7 +17,7 @@
             <ul>
             <% tasks.forEach( el => { %>
                     <li class='taskItem' data-id='<%=el._id%>'>
-                        <span class='<%= el.done === true ? 'Done' : 'Not Done'%>'><%= el.task %></span>
+                        <span class='<%= el.done === true ? 'done' : 'notDone'%>'><%= el.task %></span>
                         <span><%= el.name %></span>
                         <span><%= el.address %></span>
                         <span><%= el.phoneNumber %></span>
