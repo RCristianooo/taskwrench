@@ -14,20 +14,8 @@
     <div class="flex justify-left items-center min-h-screen">
         <div class="ml-14 app text-left">
             <h2 class="text-info" style="font-size: 2.5rem;">Tasks & Contacts</h2>
-            <ul>
-            <% tasks.forEach( el => { %>
-                    <li class='taskItem' data-id='<%=el._id%>'>
-                        <span class='<%= el.done === true ? 'done' : 'notDone'%>'><%= el.task %></span>
-                        <span><%= el.name %></span>
-                        <span><%= el.address %></span>
-                        <span><%= el.phoneNumber %></span>
-                        <span><%= el.notes %></span>
-                        <span class='del'> Delete </span>
-                    </li>
-            <% }) %>    
-            </ul>
 
-            <h2 class="mb-6 text-blue-950"><%= user.userName %> has <%= left %> tasks left to do.</h2>
+            <h2 class="mb-6 text-blue-950">Welcome <%= user.userName %>! Add a task & client.</h2>
 
             <form action="/tasks/createTask" method='POST'>
                 <input type="text" placeholder="Enter Task" name='taskItem' class="input input-info w-2/4 mb-4 border-info bg-slate-100 text-blue-950">
@@ -41,6 +29,32 @@
             <a href="/logout" class="btn btn-info mb-8">Logout</a>
         </div>
     </div>
+    <section class="tasks ml-14 w-80 app text-left bg-slate-100 ">
+        <h4 class="text-info" style="font-size: 2rem;">Your Tasks & Contacts</h4>
+        <h2 class="mb-6 text-blue-950"><%= user.userName %> has <%= left %> tasks left to do.</h2>  
+        <ul class="overflow-y-scroll h-80 mb-4">
+            <% tasks.forEach(el => { %>
+                <li class='taskItem flex-col items-start mb-4 border border-info pr-0' data-id='<%=el._id%>'>
+                    <span class='p-2 <%= el.done === true ? 'done line-through' : 'notDone text-info'%>'><%= el.task %></span>
+                    <span class='del btn btn-xs btn-error ml-auto'>Delete</span>
+                </li>
+                <li class='taskItem p-2 flex-col items-start mb-4 border border-info pr-0'>
+                    <span class="name text-left text-sm md:text-base mr-4 text-black"><%= el.name %></span>
+                </li>
+                <li class='taskItem p-2 flex-col items-start mb-4 border border-info'>
+                    <span class="address text-left text-xs md:text-base mr-4 text-black"><%= el.address %></span>
+                </li>
+                <li class='taskItem p-2 flex-col items-start mb-4 border border-info pr-0'>
+                    <span class="phoneNumber text-left text-sm md:text-base mr-4 text-black"><%= el.phoneNumber %></span>
+                </li>
+                <li class='taskItem h-auto flex-col items-start mb-4 input input-bordered input-info pr-0 bg-slate-100'>
+                    <span class="notes text-left text-sm md:text-base mr-4 text-black"><%= el.notes %></span>
+                </li>
+                <div class="divider divider-info mb-8"></div>
+            <% }) %>
+        </ul>
+    </section>
+    
     <footer class="footer footer-center bg-info p-4 text-base-content">
         <aside class="text-blue-950">
             <p>Built by Software Engineer <a href="http://cristianroblero.netlify.app" class="text-slate-100">Cristian Roblero</a></p>

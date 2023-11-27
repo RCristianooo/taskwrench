@@ -10,3 +10,7 @@
 .not{
     text-decoration: underline;
 }
+
+body {
+    font-family: "Work Sans", Helvetica, sans-serif;
+  }
