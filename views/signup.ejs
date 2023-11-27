@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taskwrench - Signup</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/imgs/taskwrench-32x32.png"
+    />
     <link rel="stylesheet" href="/css/output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +24,10 @@
                     <div class="alert alert-danger"><%= el.msg %></div>
                 <% }) %>    
             <% } %>
-            <h1 class="text-info" style="font-size: 2.5rem;">Taskwrench</h1>
+            <div class="flex items-center">
+                <img src="/imgs/taskwrench.png" alt="Taskwrench">
+                <h1 class="pl-2 text-info" style="font-size: 2.5rem;">Taskwrench</h1>
+            </div>
             <form action="/signup" method="POST" class="flex flex-col">
                 <input type="text" name="userName" placeholder="User Name" class="input input-info w-full mb-4 border-info bg-slate-100 text-blue-950">
                 <input type="email" name="email" placeholder="Email" class="input input-info w-full mb-4 border-info bg-slate-100 text-blue-950">
