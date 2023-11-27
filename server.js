@@ -40,7 +40,12 @@ app.use(flash())
   
 app.use('/', mainRoutes)
 app.use('/tasks', taskRoutes)
+
+// Health check route
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
  
 app.listen(process.env.PORT, ()=>{
-    console.log('Server is running, you better catch it!')
+    console.log(`Server is running, you better catch it on ${process.env.PORT}!`)
 })    
