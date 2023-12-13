@@ -1,44 +1,17 @@
-# Introduction
+# Taskwrench
 
-A Simple ToDo App is built using the MVC Architecture, we have also implemented "authorization" so folx can sign up, customize & personalize the app 
+Your solution to empowering productivity! Keep track of every client using the efficiency, precision, and ease of task management with Taskwrench.
 
----
+![image](https://github.com/RCristianooo/taskwrench/assets/114029162/504830e7-4dca-4781-96dd-f8e6ca6204be)
 
-> Be sure to add that lovely star 😀 and fork it for your own copy
+**Link to project:** [Taskwrench](https://taskwrench.onrender.com)
 
----
+## How It's Made
 
-# Objectives
+**Tech used:** EJS, Tailwind, MongoDB/Mongoose, Node, Express, JavaScript, HTML, CSS
 
-- It's a beginner level app created to understand how MVC concept and logins are added
+**Packages/Dependencies used:** bcrypt, connect-mongo, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, passport, validator
 
----
+## Optimizations
 
-# Who is this for? 
-
-- It's for beginners & intermediates with little more experience, to help understand the various aspects of building a node app with some complex features
-
----
-
-# Packages/Dependencies used 
-
-bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator
-
----
-
-# Install all the dependencies or node packages used for development via Terminal
-
-`npm install` 
-
----
-
-# Things to add
-
-- Create a `.env` file and add the following as `key: value` 
-  - PORT: 2121 (can be any port example: 3000) 
-  - DB_STRING: `your database URI` 
- ---
- 
- Have fun testing and improving it! 😎
-
-
+## Lessons Learned
