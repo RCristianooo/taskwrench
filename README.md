@@ -20,4 +20,9 @@ Taskwrench leverages a cutting-edge technology stack to deliver a reliable and e
 
 ## Optimizations
 
+- Linking accounts from Taskwrench to Tradelancing
+- Saved clients for additional jobs that can come up in the future
+- Built-in Calendar
+- Accessibility
+
 ## Lessons Learned
