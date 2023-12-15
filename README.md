@@ -8,7 +8,7 @@ Your solution to empowering productivity! Keep track of every client using the e
 
 ## How It's Made
 
-**Tech used:** EJS, Tailwind, MongoDB/Mongoose, Node, Express, JavaScript, HTML, CSS
+**Tech used:** EJS, Tailwind CSS, MongoDB/Mongoose, Node, Express, JavaScript, HTML, CSS
 
 Taskwrench is a full-stack web application crafted for tradespeople to efficiently manage their tasks and clients. Users can create, monitor, and organize their tasks while accessing essential client information. The application follows the Model-View-Controller (MVC) design pattern to ensure scalability and maintainability for future developments.
 
@@ -26,3 +26,5 @@ Taskwrench leverages a cutting-edge technology stack to deliver a reliable and e
 - Accessibility
 
 ## Lessons Learned
+
+The utilization of Tailwind CSS and its utility class philosophy proved highly effective, accelerating development and ensuring a polished, responsive UI. While deploying on Render offered reliability, understanding its workings required some time. These experiences not only enhanced efficiency but also deepened my understanding of styling and cloud hosting.
