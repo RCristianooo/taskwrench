@@ -1,44 +1,31 @@
-# Introduction
+# Taskwrench
+Your solution to empowering productivity! Keep track of every client using the efficiency, precision, and ease of task management with Taskwrench.
 
-A Simple ToDo App is built using the MVC Architecture, we have also implemented "authorization" so folx can sign up, customize & personalize the app 
+![image](https://github.com/RCristianooo/taskwrench/assets/114029162/504830e7-4dca-4781-96dd-f8e6ca6204be)
 
----
+**Link to project:** [Taskwrench](https://taskwrench.onrender.com)
 
-> Be sure to add that lovely star 😀 and fork it for your own copy
+## How It's Made
+**Tech used:** EJS, Tailwind CSS, MongoDB/Mongoose, Node, Express, JavaScript, HTML, CSS
 
----
+Taskwrench is a full-stack web application crafted for tradespeople to efficiently manage their tasks and clients. Users can create, monitor, and organize their tasks while accessing essential client information. The application follows the Model-View-Controller (MVC) design pattern to ensure scalability and maintainability for future developments.
 
-# Objectives
+The frontend is designed using EJS for dynamic templating and Tailwind CSS for a polished and responsive user interface. Node.js and Express handle robust authentication processes, ensuring secure access to the platform. MongoDB, a powerful NoSQL database solution, serves as the backend foundation, storing and retrieving data seamlessly.
 
-- It's a beginner level app created to understand how MVC concept and logins are added
+Taskwrench leverages a cutting-edge technology stack to deliver a reliable and efficient solution tailored to the dynamic requirements of tradespeople. The result is a user-friendly platform that empowers tradespeople to streamline their workflow and enhance client interactions.
 
----
+**Packages/Dependencies used:** bcrypt, connect-mongo, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, passport, validator
 
-# Who is this for? 
+## Optimizations
+- Linking accounts from Taskwrench to Tradelancing
+- Saved clients for additional jobs that can come up in the future
+- Built-in Calendar
+- Accessibility
 
-- It's for beginners & intermediates with little more experience, to help understand the various aspects of building a node app with some complex features
+## Lessons Learned
+The utilization of Tailwind CSS and its utility class philosophy proved highly effective, accelerating development and ensuring a polished, responsive UI. While deploying on Render offered reliability, understanding its workings required some time. These experiences not only enhanced efficiency but also deepened my understanding of styling and cloud hosting.
 
----
+## Examples:
+Take a look at these couple examples that I have in my own portfolio:
 
-# Packages/Dependencies used 
-
-bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator
-
----
-
-# Install all the dependencies or node packages used for development via Terminal
-
-`npm install` 
-
----
-
-# Things to add
-
-- Create a `.env` file and add the following as `key: value` 
-  - PORT: 2121 (can be any port example: 3000) 
-  - DB_STRING: `your database URI` 
- ---
- 
- Have fun testing and improving it! 😎
-
-
+**Tradelancing:** https://github.com/RCristianooo/Tradelancing
