@@ -1663,14 +1663,6 @@ html {
   max-width: 1024px;
 }
 
-.flex-row {
-  flex-direction: row;
-}
-
-.flex-row-reverse {
-  flex-direction: row-reverse;
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -1736,12 +1728,12 @@ html {
   padding: 1rem;
 }
 
-.pr-0 {
-  padding-right: 0px;
-}
-
 .pl-2 {
   padding-left: 0.5rem;
+}
+
+.pr-0 {
+  padding-right: 0px;
 }
 
 .text-left {

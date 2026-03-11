@@ -45,7 +45,10 @@ app.use('/tasks', taskRoutes)
 app.get("/health", (req, res) => {
   res.status(200).send("OK");
 });
+
+//Server Running
+const PORT = process.env.PORT || 3526;
  
-app.listen(process.env.PORT, ()=>{
-    console.log(`Server is running, you better catch it on ${process.env.PORT}!`)
+app.listen(PORT, ()=>{
+    console.log(`Server is running, you better catch it on ${PORT}!`)
 })    
